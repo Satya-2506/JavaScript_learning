@@ -47,13 +47,13 @@
 // let isLoggedIn = null
 // let booleanIsLoggedIn = Boolean(isLoggedIn)  // value = false, type = boolean
 
-let isLoggedIn = undefined
-let booleanIsLoggedIn = Boolean(isLoggedIn)  // value = false, type = boolean
+// let isLoggedIn = undefined
+// let booleanIsLoggedIn = Boolean(isLoggedIn)  // value = false, type = boolean
 
 
 // ---Output
-console.log(booleanIsLoggedIn);
-console.log(typeof booleanIsLoggedIn);
+// console.log(booleanIsLoggedIn);
+// console.log(typeof booleanIsLoggedIn);
 
 
 // ---summary
@@ -62,4 +62,51 @@ console.log(typeof booleanIsLoggedIn);
 // "sm" => true
 // null => false
 // undefined => false
+
+
+
+// **************************************** Operations ********************************************
+
+// console.log(4 + 3)   // 7
+// console.log(4 - 3)   // 1
+// console.log(2 * 2)   // 4
+// console.log(2 ** 3)  // 8
+// console.log(6 / 2)   // 3
+// console.log(7 % 3)   // 1
+
+
+// console.log("Hello," + " Satya")  // Hello, Satya
+// console.log("1" + 2) // 12
+// console.log(1 + "2") // 12
+// console.log("1" + 2 + 2) // 122
+// console.log(1 + 2 + "2") // 32
+
+// let count = 100; 
+// console.log(count++) // 100
+// console.log(count)   // 101
+// console.log(++count) // 102
+
+
+
+// ********************** Comparision Operator ********************************
+// console.log(4 > 3)   // true
+// console.log(5 < 2)   // false
+// console.log(5 >= 5)  // true
+// console.log(2 <= 6)  // true
+// console.log(5 == 1)  // false 
+
+// console.log("2" == 2)   // true
+// console.log("2" === 2)  // false
+// console.log("02" == 2)  // true
+
+// console.log(null > 0)    // false
+// console.log(null == 0)   // false 
+// console.log(null === 0)  // false 
+// console.log(null >= 0)   // true
+
+console.log(undefined > 0)    // false
+console.log(undefined < 0)    // false
+console.log(undefined == 0)   // false 
+console.log(undefined === 0)  // false 
+console.log(undefined >= 0)   // false
 

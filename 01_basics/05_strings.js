@@ -1,7 +1,7 @@
 let name = "Satya"
 let repoCount = 50
 
-// Concatication 
+// Concatination 
 // console.log(name + " " + repoCount + " Value"); // not recomended (outdated)
 // console.log(`Hello my name is ${name} and my repo count is ${repoCount}`)
 

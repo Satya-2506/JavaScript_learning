@@ -3,7 +3,6 @@
 
 // string
 const name = "Manisha"
-const husbandName = "Satya";
 
 // Number
 const score = 100;
@@ -56,4 +55,56 @@ const myFunction = function() {
 Javascript is a dynamically typed language
 -- We do not need to declare the datatype when creating variables in JS
 -- Variable types are determined at run time automatically
+*/
+
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------
+
+// ****************** Stack and Heap memory in JavaScript ***************************
+
+// ------------- Stack (Primitive) --------------------
+  
+let herName = "Manisha"
+let otherName = herName
+
+console.log(herName)     // Manisha
+console.log(otherName)  // Manisha
+
+otherName = "Manisha Mohapatra"
+
+console.log(herName)      // Manisha
+console.log(otherName)   // Manisha Mohapatra
+
+
+/* 
+when we are creating a primitive type variable it is created in the stack memory.
+when we try to assign a variable's value to another variable a copy of the variable gets assigned on the original value
+thus when we tried to change the value of the copied variable only the copied value changed not the original value
+*/
+
+
+// --------------- Heap (Non-Primitive) --------------------
+
+let user = {
+    email: "user@gmail.com",
+    upi: "user@ibl"
+}
+
+let anotherUser = user
+
+console.log(user.email)            // user@gmail.com
+console.log(anotherUser.email)     // user@gmail.com
+
+anotherUser.email = "satya@gmail.com"
+
+console.log(user.email)            // satya@gmail.com
+console.log(anotherUser.email)     // satya@gmail.com
+
+
+/*
+When we create a non-primitive type variable the variable gets in the stack, but the object reference is created in the heap memory
+When we try to copy the value to the another variable is gets the reference of the same object (Original object not a copy) from heap
+
+thus when we tried to change the value of the copied variable, original variable also changed
 */

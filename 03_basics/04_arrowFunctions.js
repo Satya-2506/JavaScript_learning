@@ -11,7 +11,7 @@ const user = {
     welcomeMessage: function() {
         console.log(`${this.userName}, welcome to website`)
         console.log(this)
-    }
+    } 
 }
 
 // user.welcomeMessage();

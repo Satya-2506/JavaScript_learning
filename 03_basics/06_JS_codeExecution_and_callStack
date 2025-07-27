@@ -1,0 +1,149 @@
+What is an Execution Context?
+An Execution Context is the environment in which JavaScript code is evaluated and executed.
+
+You can think of it as a container that holds variables, functions, and the value of this.
+
+🔄 Types of Execution Context
+Type	Description
+Global Execution Context	Created by default when JS code runs. Only one exists.
+Function Execution Context	Created whenever a function is invoked. Many can exist.
+Eval Execution Context	Created by using eval() (rarely used, discouraged).
+
+🌐 1. Global Execution Context (GEC)
+Automatically created when JS starts running.
+
+this refers to the global object (window in browsers).
+
+All global variables and functions are placed here.
+
+-------------------------------
+var name = "Satya";
+
+function sayHello() {
+    console.log("Hello");
+}
+
+-------------------------------
+
+In the above code, a global execution context is created for the variable and the function.
+
+🔁 2. Function Execution Context (FEC)
+Created every time a function is called.
+
+Has its own Variable Environment, Scope Chain, and this value.
+
+Gets pushed to the Call Stack when invoked.
+
+-------------------------------
+function greet() {
+    var message = "Hi!";
+    console.log(message);
+}
+
+greet(); // Creates new execution context
+-------------------------------
+
+Each time you call greet(), a new function execution context is created and then destroyed after execution.
+
+⚙️ Execution Context Lifecycle
+Every context goes through two phases:
+
+1️⃣ Creation Phase
+this is set
+
+Memory is allocated to variables and functions
+
+Variables are hoisted with value undefined
+
+2️⃣ Execution Phase
+Code is actually run
+
+Variables are assigned actual values
+
+Functions are executed
+
+📚 Example: Execution Context in Action
+-------------------------------
+var x = 10;
+
+function test() {
+    var y = 20;
+    console.log(x + y);
+}
+
+test();
+------------------------------
+
+Execution steps:
+
+Global Execution Context is created.
+
+x and test are hoisted.
+
+x assigned value 10
+
+test() is invoked → creates new Function Execution Context
+
+Inside test(), y is created and assigned 20
+
+console.log(x + y) runs → outputs 30
+
+FEC is popped off the call stack after execution.
+
+🧠 Call Stack (Execution Stack)
+A stack data structure that keeps track of execution contexts.
+
+Works on LIFO (Last In, First Out) principle.
+
+🔁 Example:
+
+-----------------------------------
+function one() {
+    console.log("One");
+    two();
+}
+
+function two() {
+    console.log("Two");
+}
+
+one();
+-----------------------------------
+
+Call Stack Steps:
+
+Step	Call Stack
+1	Global Context
+2	one()
+3	two()
+4	two() completes → popped
+5	one() completes → popped
+6	Stack is empty
+
+❗ Important Concepts Covered
+Execution Context is where the code runs.
+
+Every function call creates a new execution context.
+
+The Call Stack manages execution contexts.
+
+Execution has two phases: Creation and Execution.
+
+JS is single-threaded – only one task at a time.
+
+🧠 Real-Life Analogy
+Imagine a stack of plates (Call Stack):
+
+You put a plate (function) on top when a function is called.
+
+You remove it (pop) when the function completes.
+
+The bottom plate is the Global Execution Context, which is always present.
+
+✅ Summary Table
+Concept	                  Description
+Execution Context	      Environment where JS code runs
+Global Context         	  Default context, only one
+Function Context	      Created on each function call
+Call Stack	              Keeps track of execution contexts
+Hoisting	              Declarations are moved to top during creation

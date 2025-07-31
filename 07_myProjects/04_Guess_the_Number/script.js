@@ -19,7 +19,7 @@ if(playGame) {
         e.preventDefault();
         const guess = parseInt(userInput.value)
 
-        console.log(guess)
+        // console.log(guess)
         validateGuess(guess)
 
     })

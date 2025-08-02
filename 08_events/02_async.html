@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynce in JS</title>
+</head>
+<body>  
+    <h1>Hello from JS</h1>
+    <button id="stop">Stop</button>
+</body>
+    <script>
+        // setTimeout(), setInterval(), clearTimeout(), clearInterval()
+        
+
+        // ------------------------ setTime0ut() and clearTimeout() -----------------------------
+        // --- 01
+        // setTimeout(() => {
+        //     console.log("Manisha")
+        // }, 2000); // this code will print Manisha to the console after 2 second
+
+        // --- 02
+        function printName() {
+            console.log("Manisha Mohapatra");
+        }
+
+        // setTimeout(printName, 2000)
+        // const printRef = setTimeout(printName, 2000) 
+
+        // clearTimeout(printRef)
+
+        // --- 03
+        // const printName = setTimeout(() => {
+        //     console.log("Manish Satya")
+        // }, 2000); // this will print Manisha Satya after 2 sec
+
+        // clearTimeout(printName) // This will prevent the setTime out function so printName will not be executed
+        // console.log("Satya")
+
+
+        // ------------------------------ setInterval() and clearInterval() ------------------------------------------
+        // ---01
+        // setInterval(() => {
+        //     console.log("Satya Ranjan")
+        // }, 2000);   // this will print Satya Ranjan to the console in every 2 second interval of time
+        
+        // --- 02
+        // function print() {
+        //     console.log("Satya Ranjan")
+        // } 
+        
+        // const consoleOutput = setInterval(() => {
+        //     print()
+        // },2000);
+
+        // clearInterval(consoleOutput)
+
+        // --- 03
+        const sysDate = function (str) {
+            console.log(str, Date.now());
+
+        }
+        
+        const intervalId = setInterval(sysDate, 2000, "Hii")
+
+        clearInterval(intervalId)
+
+        
+    </script>
+
+</html>

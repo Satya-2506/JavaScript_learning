@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Practice Project</title>
+</head>
+<body>  
+    <h1>Hello from JS</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+    <script>
+        // --- 01 (changing the h1 element through setTimeout() and preventing from the stop button)
+        // const changeMe = setTimeout(() => {
+        //     document.querySelector('h1').innerHTML = "Hello JS coderz"
+        // }, 2000);
+        
+        // document.querySelector("#stop").addEventListener('click', (e) => {
+        //     clearTimeout(changeMe)
+        //     console.log("satya")          
+        // })
+
+
+        // --- 02 (By clicking the start button the printMes function executes on a given interval, and by clicking on the stop it stops executing
+        
+        const printMes = function() {
+            console.log("Hi", Date.now())
+        }
+        
+        let interval
+        document.querySelector("#start").addEventListener('click', (e) => {
+            // console.log("Manisha");
+
+            interval = setInterval(() => printMes(), 2000);
+        })
+        
+        document.querySelector("#stop").addEventListener('click', (e) => {
+            // console.log("Satya");
+            
+            clearInterval(interval);
+            interval = null;
+        })
+        
+
+
+        // We have done two projects based on this concept
+        // 07_myProjects/05_Unlimited_Color_Changer
+        // 
+
+    </script>
+
+</html>
